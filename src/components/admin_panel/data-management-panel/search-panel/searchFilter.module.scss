@@ -1,0 +1,22 @@
+.filter {
+  display: flex;
+}
+.filter img {
+  margin-left: -2rem;
+  width: 1.3rem;
+}
+.filter input {
+  width: 100%;
+  padding: 0.6rem;
+  padding-left: 2rem;
+
+  font-size: 1.05rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: 0.15em solid #9b9b9b;
+  background: #fafafa;
+}
+.filter input:focus {
+  border-color: #1a1a1a;
+  outline: 0;
+}

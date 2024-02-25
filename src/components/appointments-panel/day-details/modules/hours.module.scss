@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: "Segoe UI";
+}
+.title {
+  display: none;
+
+  width: 100%;
+  padding: 2rem;
+
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.8rem;
+  row-gap: 1rem;
+
+  width: 100%;
+  margin: 1rem;
+}
+.box > div {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.3rem 0.5rem;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+div.booked {
+  color: #949494;
+  cursor: default;
+}
+div.accepted {
+  color: #e3e2e2;
+  background: #232b2b;
+}
+div.toAccept {
+  color: #fafafa;
+  background: #7b9100;
+  color: #fafafa;
+  background: #232b2b;
+  border: 0.2em solid rgb(232, 190, 0);
+  padding: 0.2rem 0.4rem;
+}
+div.notConfirmed {
+  color: #fafafa;
+  background: #232b2b;
+  border: 0.2em solid rgb(232, 190, 0);
+  padding: 0.2rem 0.4rem;
+}
+div.confirmed {
+  background: #004e32;
+  color: #fafafa;
+}
+div.booked.collision {
+  background-color: rgb(104, 22, 22);
+}
+
+div.free {
+  border: 0.1em solid #dedede;
+}
+.free:hover {
+  background-color: #2f2f2f;
+}
+div.duplicate {
+  background-color: rgb(150, 65, 56);
+}
+
+div.pickedHours,
+div.pickedDate,
+div.pickedHours:hover,
+div.pickedDate:hover {
+  background: rgb(232, 190, 0);
+  color: #1a1a1a !important;
+  border: 0;
+}
+.invalid div.pickedHours {
+  background: rgb(230, 0, 0);
+}
+.collision.successReserv {
+  background: #004d1f !important;
+  color: #fafafa;
+}
+
+.showDetails {
+  box-shadow: 0px 0px 8px 2px rgb(255 242 180 / 65%);
+}

@@ -1,0 +1,65 @@
+.addNew {
+  width: 90%;
+  text-align: center;
+  padding: 0.6rem;
+
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fafafa;
+  cursor: pointer;
+}
+.addNew.selected {
+  background: #2828289c;
+  border: 0.2em solid #1a1a1a;
+  border-radius: 0.5rem;
+}
+.searchList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-height: 25rem;
+  padding: 1rem;
+
+  overflow-y: scroll;
+  border-radius: 0;
+
+  color: #fafafa;
+  /* border-bottom: 0.4em solid #1a1a1a;
+      border-top: 0.4em solid #1a1a1a;
+      border-left: 0.2em solid #1a1a1a; */
+}
+.elementData {
+  display: grid;
+  grid-template-columns: 33% repeat(auto-fit, minmax(0, 1fr));
+  gap: 0.2em;
+
+  width: 100%;
+  padding: 0.2rem 1rem;
+
+  cursor: pointer;
+  border: 0.2em solid #9b9b9b;
+
+  border-radius: 0.5rem;
+}
+.elementData.selected {
+  background: #2828289c;
+  border-color: #1a1a1a;
+}
+.elementData > div {
+  position: relative;
+  padding: 0.5rem;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.elementData > div::-webkit-scrollbar {
+  height: 0.3rem;
+}
+
+.editUser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.2rem;
+}

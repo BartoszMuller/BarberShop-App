@@ -1,0 +1,475 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+} 
+
+button {
+  all: unset;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+  color: #1a1a1a;
+}
+
+html {
+  font-size: clamp(10px, calc(8px + 0.88vh), 10vw);
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  overflow-y: scroll;
+  color: #fafafa;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera 
+body::-webkit-scrollbar {
+  display: none;
+} */
+
+/* Hide scrollbar for IE, Edge and Firefox 
+body {
+
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+ 
+}*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9b9b9b;
+  border-radius: 150px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.loading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width:100%;
+  height: 100%;
+  
+  background: #1a1a1a1e;
+  color: #fafafa;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.centred{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.5rem;
+
+
+  font-size: 1.36rem;
+  letter-spacing: 0.09em;
+  font-weight: 400;
+
+  border: 0.09em solid #fafafa;
+
+  background-color: #0f0f0f;
+
+  transition: background-color 0.4s ease-in-out;
+}
+
+/* ----------------------------------------*/
+/* Main */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+  .container > div{
+    width: 100%;
+    min-height: 100svh;
+    scroll-snap-align: center;
+  }
+
+
+/* --------- HOME -------- */
+
+#home{
+  display: flex;
+  flex-wrap: wrap-reverse;
+
+  width: 100%;
+
+  color: #fafafa;
+
+  background-color: #101010;
+}
+      .home-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100svh;
+        flex-grow: 1;
+      }
+        #home-top{
+          display: flex;
+          flex-direction: column;
+          align-self: start;
+         
+         
+          padding-top:6rem;   
+          padding-inline: 5vw;
+          margin-bottom: 4rem;      
+        }
+
+          .home-title{
+            display: flex;
+            flex-direction: column;
+            width: max-content;
+
+            font-size: clamp(1rem, 6.6vw, 3.2rem);
+            font-weight: 500;
+            letter-spacing: 0.6em;
+            line-height: 1.5em;
+            color:#fafafa;
+          }
+
+              .white-background-title{
+                display: flex;
+                flex-direction: column;
+                
+                position:absolute;
+
+                margin-left:-0.2em;
+                padding-left: 0.2em;
+
+                line-height: 1.5em;
+
+                color: #2f2f2f;
+                background-color: #fafafa;
+
+                transition: height 0.8s, opacity 0.3s ease-in-out;
+              }
+
+              .activebg .info-background-animate {
+                  height: 100%;
+                  font-size: clamp(1rem, 6.6vw, 3.2rem);
+                  line-height:1.6em;
+                  transition: line-height 1s, font-size 1s ease-in-out;
+                }
+                .home-info{
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+
+                  position: absolute;
+
+                  width: 100%;
+
+                  font-size: clamp(0.8rem, 5vw, 1.6rem);
+                  font-weight: 400;
+                  letter-spacing: 0.3em;
+                  line-height: 1.6em;
+
+                  opacity: 0;
+
+                  transition: height 0.8s, opacity 0.3s ease-in-out; 
+                }
+
+                    .active{
+                      opacity: 100;
+                      transition: height 0.8s, opacity 0.8s ease-in-out; 
+                    }
+                .info-background-animate{
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+
+                  font-size: 0em;
+                  line-height: 0em;
+                 
+                  transition: line-height 1s, font-size 1s ease-in-out;
+                  
+                }
+                    .hide{
+                      visibility: hidden;
+                    }
+                      
+
+          .home-text{
+            display: flex;
+            
+            width: 80%;
+            margin: 3rem 0 4rem;
+            
+            font-size: clamp(0.6rem, 6.6vw, 1.02rem);
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            line-height: 1.2rem;
+
+          }
+                  .home-text > div {
+                    display: flex;
+                    flex-grow:1;
+                    width: 0;
+
+                    text-align: justify;
+                  }
+          .home-buttons{
+            display: flex;
+            gap: 2rem;
+            width:80%;
+
+            font-family: inherit;
+          }
+              .btn-info{
+                cursor: pointer;
+                padding-inline: 2rem;
+                background-color: #fafafa;
+                color: #1a1a1a;
+                font-weight: 500;
+              }
+              .btn-kontakt{
+                cursor: pointer;
+                padding-inline: 2rem;
+              }
+
+          .active-btn{
+            color:#101010;
+            background-color: #fafafa;
+          }
+      
+      .home-bottom{
+        padding-bottom: 4rem;
+        width: 100%;
+      }
+        .home-bottom a{
+          flex-direction: column;
+        }
+          .arrow-title{
+              display: flex;
+              
+              font-size: 1.8rem;
+              font-weight: 400;
+              letter-spacing: 0.05em;
+
+              color:#ffffff;   
+
+              opacity:0;
+
+              transition: padding 0.8s, opacity 0.4s ease-in-out;
+          }
+              .home-bottom:hover div{
+                padding-bottom: 1rem;
+
+                opacity:100;
+                
+                transition: padding 0.8s, opacity 0.8s ease-in-out; 
+              }
+              .home-bottom img{
+                width: 2.3rem;
+              }
+
+  .home-img{
+    position: relative;
+
+    display: flex;
+    flex-grow: 8;
+
+    min-height: 100svh;
+    min-width: 40%;
+
+    background: url("/images/home-background.png") no-repeat center right;
+    background-size: cover;
+    
+  }
+    nav{
+      display: flex;
+      flex-direction: column;
+      
+      margin: auto auto 6vh 6.5vw;
+
+      font-size: clamp(2rem, 6.6vw, 2.3rem);
+
+      z-index: 1;
+    }
+        nav a{
+          padding:0.4em 0.2em;
+        }
+        nav a:last-child{
+          font-size:2em;
+          padding:0;
+        }
+
+
+      
+
+
+#omnie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fafafa;
+  color: #1e1e1e;
+  min-height: 100svh;
+  
+}
+
+
+.omnie-center{
+  margin:auto;
+
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+#cennik{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  flex-grow: 1;
+  
+  font-weight: 400;
+  color: white;
+  
+  background: url("/images/cennik-background.png") no-repeat center center;
+  background-size: cover;
+}
+
+  .cennik-img{
+    display: flex;
+    flex-grow: 12;
+
+    min-width: max-content;
+    width:fit-content;
+    min-height: 50vh;
+
+    padding-right: 4rem;
+
+
+  }
+
+
+  .cennik-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    flex-grow: 1;
+
+    background-color: #dcdcdc2c;
+    backdrop-filter: blur(3px);
+
+  }
+
+    .cennik-title{
+      flex-direction: column;
+      margin-inline: auto;
+      margin-top: 6rem;
+
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+        .cennik-title img{
+          margin-top: 0.7rem;
+
+          height: 1.8rem;
+        }
+
+    .ceny{
+      display: flex;
+      flex-direction: column;
+
+      margin: auto;
+      padding: 2rem 5vw 4rem 2.5vw;
+
+      gap: 2.5em
+    }
+
+      .ceny-top{
+        display: flex;
+        gap:0.8rem;
+        
+        margin: 3rem 0 1.3rem;
+      }
+          .on{
+            background-color: #236387;
+          }
+          .ona{
+            background-color: #AF4545;
+          }
+      
+            .cena-prostokat{
+              width:4.1rem;
+              height: 2.2rem;
+
+              font-size: 1.4rem;
+            }
+
+            .cena-linia{
+              width: 0.03em;
+              
+              padding: 0.13em;
+            }
+
+            .cena-nazwa{
+              font-size: 1.5rem;
+              background-color: none;
+            }
+      
+      .ceny-content{
+        display: flex;
+        justify-content: space-between;
+
+        margin-left: 5rem;
+
+        font-size: 1rem;
+      }
+      .ceny-content div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        gap:1.3rem;
+      }
+
+      .cena-uslugi{
+        text-align: right;
+      }

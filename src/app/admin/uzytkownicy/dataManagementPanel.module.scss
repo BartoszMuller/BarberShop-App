@@ -1,0 +1,150 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+
+  max-width: 90%;
+  padding: 1rem;
+
+  color: #1a1a1a;
+}
+.searchPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  width: 30rem;
+  padding: 2rem;
+  min-height: 35rem;
+
+  background: #8d8d8d63;
+  backdrop-filter: blur(10px);
+}
+
+.dataManagementPanel {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  width: 45rem;
+  padding: 4rem;
+
+  background: #fafafa;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 15px -5px #000000;
+  font-family: "Segoe UI";
+}
+
+.title {
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.title > div {
+  max-width: 14rem;
+}
+
+.dataWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.data > div {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.data label {
+  position: absolute;
+  left: -3.4rem;
+
+  width: 5rem;
+  text-align: right;
+  padding: 0.3em;
+
+  border-radius: 5em;
+  background: #fafafa;
+
+  color: #1a1a1a;
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+.data input {
+  padding: 0.6em;
+  padding-left: 2.5em;
+
+  font-size: 1.05rem;
+  font-weight: 500;
+  border-radius: 0.2em;
+  border: 0.15em solid #9b9b9b;
+  background: #fafafa;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+}
+.submit button {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+
+  padding: 1em 1.6em;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+
+  border: 0;
+  background: #fafafa;
+
+  cursor: pointer;
+}
+.submit img {
+  width: 1.8rem;
+}
+
+.login_btn {
+  position: absolute;
+  top: 6rem;
+  right: 5.5vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.3em;
+  border-radius: 100%;
+  border: 0.25em solid #ffd902;
+  background-color: unset;
+  cursor: pointer;
+  z-index: 2;
+}
+.LogincontainerOpen {
+  border: 0.25em solid #cba20c;
+}
+
+.login_btn img {
+  width: 4rem;
+  background-color: #fafafa;
+  border-radius: 100%;
+}

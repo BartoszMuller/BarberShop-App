@@ -1,0 +1,32 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: #1a1a1a;
+  color: #fafafa;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: url("/images/barber-bg.png") no-repeat center center;
+  background-size: cover;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  padding-bottom: 2rem;
+
+  color: #fafafa;
+}

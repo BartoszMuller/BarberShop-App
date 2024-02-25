@@ -1,0 +1,91 @@
+.customService{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: 0.5rem;
+
+  border: 0.1em solid #dedede;
+  cursor: pointer
+}
+.customService:hover:not(.isPicked){
+  background: #2f2f2f; 
+ 
+}
+
+.isPicked{
+border: 0.1em solid #1a1a1a !important;
+background: rgb(232, 190, 0);
+color: #1a1a1a;
+}
+
+.customFields{
+  position: absolute;
+  bottom: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  width: 100%;
+  padding: 2rem;
+
+  background: #777367ba;
+  backdrop-filter: blur(3px);
+  border-radius: 0.2rem;
+  
+}
+  .customFields input, .customFields textarea{
+    border-radius: 0.2rem;
+    border: 0;
+  }
+  .numberFields{
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+    .numberFields > div{
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .numberFields input{
+      width: 3rem;
+      height: 2rem;
+      padding: 0.3rem;
+      padding-right: 0;
+
+      font-family: inherit;
+      font-size: 0.86rem;
+    }
+
+  .textFields{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    width: 100%;
+  }
+    .textFields > div{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 0.3rem
+    }
+      .textFields label{
+        width: 100%;
+      }
+      .textFields textarea{
+        width: 100%;
+        height: 4rem;
+        padding: 0.5rem;
+        
+        font-family: inherit;
+        font-size: 0.86rem;
+
+        resize: none;
+      }

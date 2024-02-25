@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 86%;
+  margin-inline: auto;
+  padding: 1rem;
+}
+.container > div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 1rem;
+}
+
+.navigation {
+  font-size: 1.05rem;
+  font-family: "Segoe UI";
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.navigation a {
+  padding: 0.2rem 0.5rem;
+}
+.navigation a.current {
+  border-bottom: 0.1em solid #fafafa;
+}
+
+.options {
+  justify-content: space-between;
+  font-size: 1rem;
+  font-family: "Segoe UI";
+}
+.options button {
+  padding: 0.7rem 1.2rem;
+
+  background: #fafafa;
+  border: 0;
+
+  color: #232323;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.options img {
+  width: 2rem;
+}

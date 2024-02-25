@@ -1,0 +1,14 @@
+.feedbackInfo {
+  min-height: 1rem;
+  color: #1a1a1a;
+}
+.feedbackInfo > div {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.feedbackInfo .response {
+  color: #1e6000;
+}
+.feedbackInfo .error {
+  color: #ca3030;
+}

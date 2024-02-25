@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  padding-bottom: 2rem;
+
+  color: #fafafa;
+}
+
+.reservBox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  max-width: 100vw;
+  width: 27rem;
+  padding: 2rem;
+
+  background: #fafafa;
+  border-radius: 1rem;
+}
+.appointments {
+  width: 100%;
+
+  color: #1a1a1a;
+}
+.summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  color: #1a1a1a;
+}
+
+.services {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  max-width: 20rem;
+  height: max-content;
+
+  border-radius: 1rem;
+}
+
+.daydetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-inline: 4rem;
+  width: 18rem;
+  min-height: 38rem;
+
+  color: #fafafa;
+}

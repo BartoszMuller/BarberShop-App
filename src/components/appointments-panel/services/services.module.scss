@@ -1,0 +1,25 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+  min-width: 18rem;
+  padding: 2rem;
+}
+.container div{
+  cursor:pointer;
+  padding: 0.5rem;
+  border: 0.1em solid #dedede;
+}
+    .container div:hover:not(.isPicked){
+      background: #2f2f2f; 
+      cursor: pointer;
+    }
+
+.isPicked{
+  border: 0 !important;
+  background: rgb(232, 190, 0);
+  color: #1a1a1a;
+}

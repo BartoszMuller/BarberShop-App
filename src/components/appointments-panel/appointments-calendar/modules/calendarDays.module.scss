@@ -1,0 +1,111 @@
+.loading{
+  height: 30rem;
+}
+.container{
+  width: 100%;
+}
+  .monthNav{
+    display: flex;
+    justify-content: space-around;
+  }
+    .monthNav button{
+      position: relative;
+
+      width:0;
+      height: 0;
+      border-top: 0.75rem solid transparent;
+      border-bottom: 0.75rem solid transparent;
+
+      cursor: pointer;
+      background: none;
+    }
+      .prevMonth{
+        border-left: 0;
+        border-right: 1.25rem solid #1a1a1a;
+      }
+        .prevMonth:disabled{
+          border-right: 1.25rem solid #959595;
+          cursor: default;
+        }
+      .nextMonth{
+        border-right: 0;
+        border-left: 1.25rem solid #1a1a1a;
+      }
+        .nextMonth:disabled{
+          border-left: 1.25rem solid #959595;
+          cursor: default;
+        }
+
+      
+  .title{
+    display: flex;
+    justify-content: center;
+
+    height: 4rem;
+
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Segoe UI';
+  }
+  .pickDate{
+    width:100%;
+    height: 4rem;
+    text-align: center;
+  }
+  .headers{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 0.6rem;
+
+    width:100%;
+    margin-bottom:  1rem;
+  }
+    .headers div{
+      display: flex;
+      justify-content: center;
+
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  .box{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 0.6rem;
+    row-gap: 0.6rem;
+
+    width: 100%;
+    
+    font-family: 'Segoe UI';
+    font-size: 1.2rem;
+
+  }
+    .box div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      aspect-ratio: 1;
+
+      color: #fafafa;
+      
+      
+    }
+      .past{
+        background: #d0d0d0;
+      }
+      .available{
+        --gradient-red: 0;
+        --gradient-blue: calc(var(--gradient-red) + 30%);
+        
+        background: #00bd3f;
+        border-bottom: 0.4em solid hsl(var(--gradient-red), 100%, 40%);
+        cursor: pointer;
+      }
+        .available:hover{
+          background: rgb(4, 158, 55);
+        }
+        .picked{
+          background: #048739;
+          border-bottom: 0.4em solid hsl(var(--gradient-red), 100%, 40%);
+        }

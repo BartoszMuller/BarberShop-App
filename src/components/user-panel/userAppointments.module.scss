@@ -1,0 +1,28 @@
+.group{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem
+}
+  .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .list{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+
+    padding-right: 0.5rem;
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
+
+    .details{
+      display:flex;
+      flex-direction: column;
+
+      gap: 0.5rem
+    }
