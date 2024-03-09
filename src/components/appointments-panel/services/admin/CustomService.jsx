@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import styles from "./customService.module.scss";
-import ReservationContext from "@/context/reservation/reservation_context";
+import ReservationContext from "@/context/reservation/reservation.context";
 import { CUSTOM_SERVICE } from "@/shared/constants/service";
 
 const CustomService = () => {
@@ -70,9 +70,7 @@ const CustomService = () => {
             <div>
               <label>Nazwa usługi:</label>
               <textarea
-                onChange={(e) =>
-                  onChangeCustomSerivce("name", e.target.value)
-                }
+                onChange={(e) => onChangeCustomSerivce("name", e.target.value)}
                 value={customService.name}
               />
             </div>

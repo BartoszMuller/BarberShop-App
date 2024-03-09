@@ -63,10 +63,10 @@ export const getAptsInInterval = async (startDate, endDate) => {
 };
 
 export const getUserAptsById = async (userId) => {
-  await prisma.Appointment.findMany({
+  return await prisma.Appointment.findMany({
     where: {
       date: {
-        gte: new Date(subDays(new Date(), 7)),
+        gte: new Date(subDays(new Date(2024, 1, 7), 7)),
       },
       userId: userId,
     },

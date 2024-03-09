@@ -2,7 +2,7 @@
 
 import { useContext } from "react";
 import styles from "./appointmentsCalendar.module.scss";
-import AppointmentsContext from "@/context/appointments-panel/appointments_context";
+import AppointmentsContext from "@/context/appointments-panel/appointments.context";
 import { useSession } from "next-auth/react";
 import EmptyContent from "@/components/static-statements/EmptyContent";
 import { isUserAdmin } from "@/app/api/utils/auth/verification";
@@ -17,7 +17,7 @@ export const AppointmentsCalendar = () => {
   const {
     onGoToPrevMonth,
     onGoToNextMonth,
-    currentMonthData,
+    currentMonthSet,
     monthNumber,
     todayMonth,
     lastAvailableMonth,
@@ -29,7 +29,7 @@ export const AppointmentsCalendar = () => {
 
   const { data: session } = useSession();
 
-  const { monthName, pastDays, availableDays } = currentMonthData;
+  const { monthName, pastDays, availableDays } = currentMonthSet;
 
   const appointments = groupedApts[monthNumber];
 

@@ -7,9 +7,7 @@ const UserNavbar = () => {
     <div className={styles.container}>
       <div className={styles.navigation}>
         <Link href="/">Home</Link>
-        <Link className={styles.current} href="/panel">
-          Terminarz
-        </Link>
+        <Link href="/panel">Terminarz</Link>
         <Link href="/panel/moje-konto">Moje konto</Link>
       </div>
 

@@ -2,11 +2,11 @@
 
 import React, { useContext, useState } from "react";
 import styles from "./dayDetails.module.scss";
-import AppointmentsContext from "@/context/appointments-panel/appointments_context";
+import AppointmentsContext from "@/context/appointments-panel/appointments.context";
 import { useQuery } from "@tanstack/react-query";
 import { format } from "date-fns";
 import axios from "axios";
-import ReservationContext from "@/context/reservation/reservation_context";
+import ReservationContext from "@/context/reservation/reservation.context";
 import Loading from "@/components/static-statements/Loading";
 import EmptyContent from "@/components/static-statements/EmptyContent";
 import { useSession } from "next-auth/react";
@@ -73,7 +73,6 @@ const DayDetails = () => {
       };
 
       workTime = getHoursLayout(
-        session,
         aptsOfSelectedDay,
         startWorkDate,
         endWorkDate,

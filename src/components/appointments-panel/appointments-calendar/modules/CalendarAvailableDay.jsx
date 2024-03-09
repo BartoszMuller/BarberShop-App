@@ -2,7 +2,7 @@ import getGradientValue from "../utils/getGradientValue";
 import styles from "./CalendarDays.module.scss";
 import { isSameDay, format } from "date-fns";
 import { useContext } from "react";
-import AppointmentsContext from "@/context/appointments-panel/appointments_context";
+import AppointmentsContext from "@/context/appointments-panel/appointments.context";
 
 const CalendarAvailableDay = (props) => {
   const { selectedDay, appointments, monthNumber, showDetailsOfDay } =

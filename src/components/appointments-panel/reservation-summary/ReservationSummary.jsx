@@ -2,10 +2,9 @@
 
 import styles from "./reservationSummary.module.scss";
 import { useContext } from "react";
-import ReservationContext from "@/context/reservation/reservation_context";
+import ReservationContext from "@/context/reservation/reservation.context";
 import { format } from "date-fns";
 import { pl } from "date-fns/locale";
-
 
 const ReservationSummary = () => {
   const {

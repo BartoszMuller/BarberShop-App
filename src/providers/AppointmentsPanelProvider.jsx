@@ -1,7 +1,7 @@
 "use client";
 
-import { AppointmentsContextProvider } from "@/context/appointments-panel/appointments_context";
-import { ReservationContextProvider } from "@/context/reservation/reservation_context";
+import { AppointmentsContextProvider } from "@/context/appointments-panel/appointments.context";
+import { ReservationContextProvider } from "@/context/reservation/reservation.context";
 import TanstackProvider from "@/providers/TanstackProvider";
 
 const AppointmentsPanelProvider = ({ children }) => {

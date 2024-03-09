@@ -5,7 +5,7 @@ import { format } from "date-fns";
 import { useContext } from "react";
 import { useSession } from "next-auth/react";
 import { isUserAdmin } from "@/app/api/utils/auth/verification";
-import AppointmentsContext from "@/context/appointments-panel/appointments_context";
+import AppointmentsContext from "@/context/appointments-panel/appointments.context";
 
 const AppointmentDetails = (props) => {
   const { data: session } = useSession();

@@ -37,11 +37,12 @@
 }
 
 div.booked {
-  color: #949494;
+  color: #a9a9a9;
   cursor: default;
 }
-div.accepted {
-  color: #e3e2e2;
+div.accepted,
+.booked.accepted {
+  color: #e3e2e2 !important;
   background: #232b2b;
 }
 div.toAccept {
@@ -64,6 +65,7 @@ div.confirmed {
 }
 div.booked.collision {
   background-color: rgb(104, 22, 22);
+  color: #fafafa;
 }
 
 div.free {

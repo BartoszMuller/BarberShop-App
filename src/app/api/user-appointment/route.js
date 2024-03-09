@@ -20,6 +20,7 @@ export const GET = async (req) => {
   if (!user) return UnauthorizedResponse();
 
   const userAppointments = await getUserAptsById(user.id);
+  console.log(userAppointments);
 
   return DoneResponse(userAppointments);
 };

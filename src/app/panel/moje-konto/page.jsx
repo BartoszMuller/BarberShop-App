@@ -11,7 +11,7 @@ const MyAccount = () => {
   const { data: appointments, isLoading } = useQuery({
     queryKey: ["userAppointments"],
     queryFn: async () => {
-      const { data } = await axios.get(`/api/userAppointments`);
+      const { data } = await axios.get(`/api/user-appointment`);
       return data;
     },
     refetchOnWindowFocus: false,
@@ -21,6 +21,7 @@ const MyAccount = () => {
     return <Loading />;
   }
   if (appointments) {
+    console.log(appointments);
     const userApts = {
       rejected: [],
       waiting: [],

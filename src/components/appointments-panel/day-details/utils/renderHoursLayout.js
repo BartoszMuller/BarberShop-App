@@ -10,7 +10,6 @@ import AccessibleBookedHour from "../modules/AccessibleBookedHour";
 import { isSameMinute } from "date-fns";
 
 const getHoursLayout = (
-  session,
   aptsOfSelectedDay,
   startWorkDate,
   endWorkDate,
@@ -34,9 +33,7 @@ const getHoursLayout = (
     const isCollision = pickedHours.includes(currentDateKey);
     const currentAppointment =
       (aptsOfSelectedDay && aptsOfSelectedDay[appointmentNumber]) || false;
-    const isUserAppointment =
-      isUserAdmin(session.user) ||
-      currentAppointment.userId === session.user.id;
+    const isUserAppointment = !!currentAppointment?.user;
 
     if (isSameMinute(currentDate, currentAppointment.date)) {
       if (isUserAppointment) {
@@ -79,11 +76,13 @@ const getHoursLayout = (
           );
         }
       } else {
-        <BlankBookedHour
-          key={currentDateKey}
-          isCollision={isCollision}
-          currentDate={currentDate}
-        />;
+        workTime.push(
+          <BlankBookedHour
+            key={currentDateKey}
+            isCollision={isCollision}
+            currentDate={currentDate}
+          />
+        );
       }
 
       appointmentNumber++;

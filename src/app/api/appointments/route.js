@@ -13,12 +13,12 @@ import {
 import { isUserAdmin } from "../utils/auth/verification";
 import { processAptsToDateTimestamps } from "../utils/process-data/appointments";
 
-const filterAppointments = (appointments) => {
-  appointments.map((appointment) => {
+const filterAppointments = (appointments, user) => {
+ return appointments?.map((appointment) => {
     if (appointment.userId === user.id) {
-      const { user, ...appointmentWithoutUser } = appointment;
+      const { user, ...appointmentWithoutUserData } = appointment;
       return {
-        ...appointmentWithoutUser,
+        ...appointmentWithoutUserData,
         user: {
           firstname: user.firstname,
           surname: user.surname,
@@ -54,7 +54,7 @@ export const GET = async (req) => {
 
   const appointmentsToResponse = isUserAdmin(user)
     ? recivedAppointments
-    : filterAppointments(recivedAppointments);
+    : filterAppointments(recivedAppointments, user);
 
   return DoneResponse(appointmentsToResponse);
 };

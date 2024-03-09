@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import styles from "./services.module.scss";
 import axios from "axios";
 import { useContext } from "react";
-import ReservationContext from "@/context/reservation/reservation_context";
+import ReservationContext from "@/context/reservation/reservation.context";
 import Loading from "@/components/static-statements/Loading";
 import ErrorContent from "@/components/static-statements/ErrorContent";
 
